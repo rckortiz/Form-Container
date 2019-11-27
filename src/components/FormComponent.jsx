@@ -16,6 +16,13 @@ const FormComponent = props => {
         <input
           className="text"
           onChange={props.handleChange}
+          name="lastName"
+          placeHolder="Last Name"
+          value={props.lastName}
+        />
+        <input
+          className="text"
+          onChange={props.handleChange}
           name="age"
           placeHolder="Age"
           value={props.age}
@@ -72,6 +79,14 @@ const FormComponent = props => {
           <br />
           <input
             type="checkbox"
+            name="lactoseFree"
+            onChange={props.handleChange}
+            checked={props.lactoseFree}
+          />
+          <span>Lactose Free</span>
+          <br />
+          <input
+            type="checkbox"
             name="isVegan"
             onChange={props.handleChange}
             checked={props.isVegan}
@@ -84,7 +99,7 @@ const FormComponent = props => {
       <div className="entered-info">
         <h2>Entered information:</h2>
         <p>
-          Your name: {props.firstName} {props.LastName}
+          Your name: {props.firstName} {props.lastName}
         </p>
         <p> Your age: {props.age} </p>
         <p> Your gender: {props.gender}</p>
